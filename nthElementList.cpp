@@ -27,7 +27,7 @@ int main()
     }
     Node *temp = head;
     Node *ar[n];
-    int i = 0;
+
     int flag = 0;
     while (temp)
     {
