@@ -1,5 +1,21 @@
 #include <iostream>
 #include <unordered_map>
+
+/*Unordered map functions
+size()
+empty()
+begin()
+end()
+find(key) returns end() if false else iterator
+count(key) returns 0 and 1
+erase(key)
+emplace(iter,key,value)
+inser({key,value})
+operator[] (key)
+
+
+*/
+
 using namespace std;
 int main()
 {
