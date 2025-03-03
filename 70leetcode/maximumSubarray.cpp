@@ -36,7 +36,6 @@ public:
                 sum += nums[j];
 
                 maximum = max(sum, maximum);
-                cout << maximum << " ";
             }
         }
         cout << endl;

@@ -17,6 +17,8 @@ public:
 };
 class Question : public Solution
 {
+    public:
+    
 };
 
 int main()
