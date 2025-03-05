@@ -26,6 +26,7 @@ Node *arrtoTree(vector<int> arr, int i)
     if (i < arr.size())
     {
         root = new Node(arr[i]);
+
         root->left = arrtoTree(arr, 2 * i + 1);
         root->right = arrtoTree(arr, 2 * i + 2);
     }
@@ -34,18 +35,19 @@ Node *arrtoTree(vector<int> arr, int i)
 
 void printTree()
 {
-    Node *r1 = arrtoTree({1, 2, 3, 4, 5, 6}, 0);
+    Node *root = arrtoTree({1, 2, 3, 4, 5, 6}, 0);
     queue<Node *> q;
-    q.push(r1);
-    while (r1 != nullptr)
+    q.push(root);
+    while (!q.empty())
     {
-
-        cout << r1->data << endl;
+        Node *node = q.front();
         q.pop();
-        if (r1->left)
-            q.push(r1->left);
-        if (r1->right)
-            q.push(r1->right);
+        cout << node->data << " ";
+
+        if (node->left)
+            q.push(node->left);
+        if (node->right)
+            q.push(node->right);
     }
 }
 
